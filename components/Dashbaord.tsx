@@ -16,12 +16,17 @@ import { useGetAllQuoteRequests } from '@/features/api/get-userqouterequest'
 const Dashbaord = () => {
 
 
- const {data:contactUsers} = useGetContactList();
+ const {data:contactUsers,error} = useGetContactList();
  const { data:qouationRequest} =  useGetAllQuoteRequests();
       
 
- console.log(qouationRequest?.length);
- console.log(contactUsers?.length);
+if(error){
+  console.log(error);
+  
+}
+
+console.log(contactUsers);
+
   return (
     <div>
       
