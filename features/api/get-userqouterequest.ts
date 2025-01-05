@@ -10,6 +10,8 @@ export const useGetAllQuoteRequests = () => {
       queryFn: async () => {
         const result = await   QuoteRequestUsers();
         if (result.error) {
+          console.log(result.error);
+          
           throw new Error(result.error);
         }
         return result.users;

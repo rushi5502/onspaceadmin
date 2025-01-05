@@ -9,6 +9,8 @@ export const useGetContactList = () => {
       queryFn: async () => {
         const result = await  GetContactDetails();
         if (result.error) {
+          console.log(result.error);
+          
           throw new Error(result.error);
         }
         return result.contactList;
