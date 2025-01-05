@@ -23,7 +23,7 @@ const Navbar = () => {
      <Link href={"/"}>Dashboard</Link>
     <Link href={"/view-contact"}>View-Contacts</Link>
     <Link href={"/customers"}>Customers</Link>
-    <Link href={"#"} onClick={()=>{handleLogout()}}>Logout</Link>
+    <Link href={"#"} onClick={handleLogout}>Logout</Link>
     </div>
 
     <div className=' md:hidden block  fixed top-5 left-5'>
@@ -33,12 +33,12 @@ const Navbar = () => {
       </SheetTrigger>
       <SheetContent side={"left"}>
         <SheetHeader className='text-start items-start'>
-          <SheetTitle>ATHAREINTERIOR</SheetTitle> 
+          <SheetTitle>Onspace Interiors</SheetTitle> 
         </SheetHeader>
         <div className=' mt-8 flex  flex-col items-start gap-6 md:hidden '>
     <Link href={"/view-contact"}>View-Contacts</Link>
     <Link href={"/use-contact-details"}>Customers</Link>
-    <Link href={"#"} onClick={()=>{handleLogout()}}>Logout</Link>
+    <Link href={"#"} onClick={handleLogout}>Logout</Link>
     </div>
        </SheetContent>
     </Sheet>
