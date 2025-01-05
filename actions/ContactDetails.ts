@@ -17,10 +17,11 @@ export const   GetContactDetails = async ()=>{
       const contactList=  await db.contactDetails.findMany({});
        
       return {success:"true", contactList} 
- 
+       
       } catch (error) {
-        return {error:"true"}
         console.log(error);
+        return {error:"true"}
+      
         
   
       }
